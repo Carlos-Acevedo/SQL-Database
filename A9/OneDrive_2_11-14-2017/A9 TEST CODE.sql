@@ -1,0 +1,16 @@
+--CHECK CHANGES
+SELECT *
+FROM lgline
+
+SELECT *
+FROM lginvoice
+
+--INSERT
+INSERT INTO LGLINE VALUES (104, 4, '3561-LYU', 9, 3.29);
+--DELETE
+DELETE FROM lgline
+WHERE line_num = 4 AND inv_num=104
+--UPDATE
+UPDATE LGLINE
+SET LINE_QTY = 4
+WHERE line_num =4 AND inv_num =104
